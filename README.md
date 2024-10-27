@@ -1,4 +1,4 @@
-Here’s a sample `README.md` file for your book management system API:
+Here’s your `README.md` file for the Book Management System API, with corrected formatting for the markdown issues:
 
 ```markdown
 # Book Management System API WITH LLM
@@ -49,8 +49,27 @@ This API provides a set of endpoints to manage a book collection, allowing users
    uvicorn main:app --reload
    ```
 
+## Environment Variables
 
-Here’s the list of your API endpoints, including their dependencies on user authentication or admin authentication:
+Create a file named `.env` in the root directory of the project with the following content:
+
+```plaintext
+GROQ_API_KEY=your_key
+SECRET_KEY=your_secret_key
+DATABASE_URL=postgres://user:pwd@localhost:5432/book_management
+```
+
+- **GROQ_API_KEY**: Your API key for the GROQ service.
+- **SECRET_KEY**: A secret key used for securing your application.
+- **DATABASE_URL**: Connection string for your PostgreSQL database in the format:
+  - `postgres://YourUserName:YourPassword@YourHostname:5432/YourDatabaseName`
+    - Replace `user` with your username.
+    - Replace `pwd` with your password.
+    - `localhost` is the hostname where your database is running.
+    - `5432` is the default port number for PostgreSQL.
+    - `book_management` is the name of the database to connect to.
+
+## API Endpoints
 
 ### Endpoints Requiring User Authentication
 
@@ -77,27 +96,26 @@ These endpoints require the user to be logged in (authenticated):
 7. **Get Book Recommendations using LLM**
    - `GET /recommendations`
 
-8. **Get current user's details**
+8. **Get Current User's Details**
    - `GET /whoami`
 
 ### Endpoints Requiring Admin Authentication
 
-These endpoints require the user to be an admin role:
+These endpoints require the user to have an admin role:
 
 1. **Generate Book Summary using LLM**
    - `POST /books/{id}/generate-summary`
 
-### Summary
+## Summary
 
 - **User Authentication Required:** 
   - `GET /books`
   - `GET /books/{id}`
+  - `PUT /books/{id}`
   - `DELETE /books/{id}`
   - `POST /books/{id}/reviews`
   - `GET /books/{id}/reviews`
   - `GET /books/{book_id}/summary`
   - `GET /recommendations`
-  - `GET /whoami` (if applicable)
-
-- **Admin Authentication Required:** 
-  - `POST /books/{id}/generate-summary`
+  - `GET /whoami`
+```
