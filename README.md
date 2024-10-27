@@ -31,8 +31,8 @@ This API provides a set of endpoints to manage a book collection, allowing users
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>](https://github.com/amolbajpai/Book-Management-System-API-WITH-LLM.git)
-   cd <repository_directory>
+   git clone https://github.com/amolbajpai/Book-Management-System-API-WITH-LLM.git
+   cd Book-Management-System-API-WITH-LLM
    ```
 
 2. Install the required packages:
