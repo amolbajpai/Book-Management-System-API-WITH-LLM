@@ -1,0 +1,79 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+env/
+env.bak/
+.venv/
+.Python
+
+# FastAPI specific files
+instance/
+.pytest_cache/
+*.sqlite3
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+logs/
+*.log
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+# C extensions
+*.so
+
+# MyPy
+.mypy_cache/
+
+# Pyre type checker
+.pyre/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Testing
+pytest.xml
+nosetests.xml
+test-results/
+
+# Environment variable files
+*.env
+*.env.local
+
+# Ignore files from version control
+*.DS_Store
+*.db
+*.tgz
+*.zip
+*.tar.gz
+*.gz
+*.tar
